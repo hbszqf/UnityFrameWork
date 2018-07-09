@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityFrameWork", "UnityFrameWork.csproj", "{02146BCF-079B-C3CD-CDF3-A38011A095E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityFrameWork.Editor", "UnityFrameWork.Editor.csproj", "{642A1413-2674-754C-4660-F334685EA4E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02146BCF-079B-C3CD-CDF3-A38011A095E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02146BCF-079B-C3CD-CDF3-A38011A095E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02146BCF-079B-C3CD-CDF3-A38011A095E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02146BCF-079B-C3CD-CDF3-A38011A095E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642A1413-2674-754C-4660-F334685EA4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642A1413-2674-754C-4660-F334685EA4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642A1413-2674-754C-4660-F334685EA4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642A1413-2674-754C-4660-F334685EA4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EC4F4F1-F732-45BA-81A7-A1CA1E41811A}
+	EndGlobalSection
+EndGlobal
