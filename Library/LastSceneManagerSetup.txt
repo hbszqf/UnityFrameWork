@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/3rd/ToLua/ToLua/Examples/02_ScriptsFromFile/ScriptsFromFile.unity
+  isLoaded: 1
+  isActive: 1
