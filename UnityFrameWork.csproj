@@ -227,6 +227,9 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity3D201722/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -526,7 +529,18 @@
     <Compile Include="Assets\3rd\ToLua\ToLua\Reflection\LuaMethod.cs" />
     <Compile Include="Assets\3rd\ToLua\ToLua\Reflection\LuaProperty.cs" />
     <Compile Include="Assets\3rd\ToLua\ToLua\Reflection\LuaReflection.cs" />
-    <Compile Include="Assets\Script\Main.cs" />
+    <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\Tools\Console.cs" />
+    <Compile Include="Assets\Scripts\Tools\GizmosCircle.cs" />
+    <Compile Include="Assets\Scripts\Tools\GuidHelper.cs" />
+    <Compile Include="Assets\Scripts\Tools\GUISettingWindow.cs" />
+    <Compile Include="Assets\Scripts\Tools\Log.cs" />
+    <Compile Include="Assets\Scripts\Tools\LuaBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Tools\ResMgr\PathConfig.cs" />
+    <Compile Include="Assets\Scripts\Tools\ResMgr\ResTool2.cs" />
+    <Compile Include="Assets\Scripts\Tools\SceneControl\StringTool.cs" />
+    <Compile Include="Assets\Scripts\Tools\ShowFPS.cs" />
+    <Compile Include="Assets\Scripts\Tools\ZipTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3rd\FairyGUI\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
