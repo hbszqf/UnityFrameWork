@@ -1,5 +1,6 @@
-// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 Shader "FairyGUI/Text Brighter"
 {
@@ -142,7 +143,7 @@ Shader "FairyGUI/Text Brighter"
 
 					#ifdef GRAYED
 					fixed grey = dot(col.rgb, fixed3(0.299, 0.587, 0.114));
-					col.rgb = fixed3(grey, grey, grey);
+					col.rgb = fixed3(grey, grey, grey);  
 					#endif
 
 					#ifdef SOFT_CLIPPED

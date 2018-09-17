@@ -224,9 +224,6 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="DOTween">
-      <HintPath>Assets/3rd/FairyGUI/DOTween.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity3D201722/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -315,12 +312,11 @@
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\HitTest\RectHitTest.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\Image.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\MaterialManager.cs" />
-    <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\MaterialPool.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\MovieClip.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\NAudioClip.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\NGraphics.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\NMaterial.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\NTexture.cs" />
-    <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\PlayState.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\ShaderConfig.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\Shape.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Core\Stage.cs" />
@@ -356,9 +352,17 @@
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Gesture\PinchGesture.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Gesture\RotationGesture.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Gesture\SwipeGesture.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\EaseManager.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\EaseType.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\GTween.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\GTweener.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\TweenManager.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\TweenPropType.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\Tween\TweenValue.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Action\ChangePageAction.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Action\ControllerAction.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Action\PlayTransitionAction.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\AsyncCreationHelper.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Controller.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\DragDropManager.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\EMRenderSupport.cs" />
@@ -402,6 +406,7 @@
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Relations.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\ScrollPane.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Transition.cs" />
+    <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\TranslationHelper.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Tree\TreeNode.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\Tree\TreeView.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\UI\UIConfig.cs" />
@@ -432,6 +437,53 @@
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Utils\XMLUtils.cs" />
     <Compile Include="Assets\3rd\FairyGUI\Scripts\Utils\ZipReader.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\DelegateFactory.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_ContainerWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_ControllerWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_DisplayObjectWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_EaseTypeWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_EventContextWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_EventDispatcherWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_EventListenerWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GButtonWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GComboBoxWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GComponentWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GGraphWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GGroupWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GImageWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLabelWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GListWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLoaderWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLuaButtonWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLuaComboBoxWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLuaComponentWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLuaLabelWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLuaProgressBarWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GLuaSliderWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GMovieClipWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GObjectPoolWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GObjectWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GProgressBarWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GRichTextFieldWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GRootWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GSliderWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GTextFieldWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GTextInputWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GTweenerWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_GTweenWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_InputEventWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_LuaUIHelperWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_LuaWindowWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_PopupMenuWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_RelationsWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_RelationTypeWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_ScrollPaneWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_StageWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_TextFormatWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_TimersWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_TransitionWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_TweenValueWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_UIPackageWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\FairyGUI_WindowWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\LuaBinder.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\LuaInterface_DebuggerWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\LuaInterface_InjectTypeWrap.cs" />
@@ -467,6 +519,7 @@
     <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_MonoBehaviourWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_ParticleSystemWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_PhysicsWrap.cs" />
+    <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_Playables_PlayStateWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_PlayModeWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_QualitySettingsWrap.cs" />
     <Compile Include="Assets\3rd\ToLua\Source\Generate\UnityEngine_QueueModeWrap.cs" />
@@ -590,6 +643,33 @@
     <Compile Include="Assets\3rd\ToLua\ToLua\Reflection\LuaMethod.cs" />
     <Compile Include="Assets\3rd\ToLua\ToLua\Reflection\LuaProperty.cs" />
     <Compile Include="Assets\3rd\ToLua\ToLua\Reflection\LuaReflection.cs" />
+    <Compile Include="Assets\Script\FrameWork\BaseCsProxy.cs" />
+    <Compile Include="Assets\Script\FrameWork\Const.cs" />
+    <Compile Include="Assets\Script\FrameWork\Debuger\LuaDebugTool.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\BaseMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\LuaMgr\LuaMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\Mgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\NetMgr\ConcurrentByteArrayQueue.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\NetMgr\Net.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\NetMgr\NetMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\NetMgr\NetProxy.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\PlayableMgr\PlayableAssetProxy.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\PlayableMgr\PlayableControllerAsset.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\PlayableMgr\PlayableMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\PlayableMgr\PlayableProxy.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\AB\ABMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\AB\ABProxy.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\AB\ABRequestManager.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\ABResMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\BaseResMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\EditorResMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\ResHelper.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\ResMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\ResMgr\SBF.cs" />
+    <Compile Include="Assets\Script\FrameWork\Mgr\SceneMgr\SceneMgr.cs" />
+    <Compile Include="Assets\Script\FrameWork\Util\FileUtil.cs" />
+    <Compile Include="Assets\Script\FrameWork\Util\Log.cs" />
+    <Compile Include="Assets\Script\FrameWork\Util\LuaUIHelper.cs" />
     <Compile Include="Assets\Script\Main.cs" />
   </ItemGroup>
   <ItemGroup>

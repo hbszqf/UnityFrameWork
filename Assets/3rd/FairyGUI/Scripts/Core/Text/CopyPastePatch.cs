@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace FairyGUI
 {
@@ -17,7 +15,7 @@ namespace FairyGUI
 		public static void Apply()
 		{
 			InputTextField.onCopy = OnCopy;
-			InputTextField.onPaste = OnPaste;
+			InputTextField.onPaste =OnPaste;
 		}
 
 		/// <summary>
